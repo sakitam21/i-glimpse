@@ -1,19 +1,19 @@
 <template>
   <div class="login">
     <div class="form">
-    	<h1>Login</h1>
+    	<h2>Login</h2>
     	<div class="inputItem">
-    		<label>Username</label>
+    		<label>username</label>
     		<input type="text" name="username" v-model="username">
     	</div>
 
     	<div class="inputItem">
-    		<label>Password</label>
+    		<label>password</label>
     		<input type="text" name="password" v-model="password">
     	</div>
 
-    	<div class="Submit">
-    		<input type="button" name="submit" value="Submit" v-on:click="submit">
+    	<div>
+    		<input type="button"  class="submit" name="submit" value="submit" v-on:click="submit">
     	</div>
     </div>
   </div>
@@ -41,7 +41,7 @@ export default {
   methods:{
   	submit:function(){
   		if(this.username==="root"&&this.password==="password"){
-  			router.push({name:'main'})
+  			router.push({name:'fairystoryhome'})
   		}else{
   			alert("用户名或者密码错误！")
   		}
@@ -55,19 +55,30 @@ export default {
 .login{
 	width: 100vw;
 	height: 100vh;
+  color: gray;
 }
 
 .form{
-	width: 380px;
-	height: 180px;
+	width: 28%;
+	height: 60%;
 	margin: 0 auto;
-	margin-top: 200px;
-	border: 1px solid black;
+	padding-top: 30vh;
 }
 
 .inputItem{
-	width: 300px;
-	height: 30px;
+	width: 90%;
+	height: 20%;
 	margin: 2px auto;
+}
+
+
+.inputItem input{
+  border-radius: 5px;
+}
+
+.submit{
+  color: gray;
+  border-radius: 5px;
+  border: 1px solid gray;
 }
 </style>

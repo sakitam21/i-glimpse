@@ -50,3 +50,43 @@ const userInfo = req => {
 }
 //返回用户信息
 Mock.mock(`${domain}\/users`,'get',userInfo);
+
+//模拟童话首页的插画信息
+const imageInfo1 = req =>{
+	console.log(req)
+
+	let infos1=[]
+
+	for (let i=0;i<3;i++){
+		let info={
+			content:Random.csentence(120, 160)
+		}
+		infos1.push(info)
+	}
+
+	return{
+		code,
+		infos1
+	}
+}
+Mock.mock(`${domain}\/imageinfo1`,'get',imageInfo1);
+
+//模拟童话首页的插画信息
+const imageInfo2 = req =>{
+	console.log(req)
+
+	let infos2=[]
+
+	for (let i=0;i<2;i++){
+		let info={
+			content:Random.csentence(120, 160)
+		}
+		infos2.push(info)
+	}
+
+	return{
+		code,
+		infos2
+	}
+}
+Mock.mock(`${domain}\/imageinfo2`,'get',imageInfo2);
