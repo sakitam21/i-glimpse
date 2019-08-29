@@ -38,22 +38,23 @@ export default{
 .storyHome{
 	width: 98%;
 	height: 1000px;
-	border: 1px solid #000000;
+	/*border: 1px solid #000000;*/
 	margin:1%;
 }
 
 .header{
 	width: 100%;
 	height: 120px;
-	border:1px solid #000000;
+	/*border:1px solid #000000;*/
 }
 
 .header .logo{
 	width: 100%;
 	height: 40px;
-	border: 1px solid #000000;
+	/*border: 1px solid #000000;*/
 	font-size: 24px;
 	font-weight: bold;
+	background-color: orange;
 }
 
 .header .menu{
@@ -65,6 +66,14 @@ export default{
 .content{
 	width: 100%;
 	height: 2000px;
-	border: 1px solid #000000;
+	/*border: 1px solid #000000;*/
+}
+
+@media screen and (max-width: 550px){
+.header .menu{
+	width: 46%;
+	height: 60px;
+	margin: 0 auto;
+}
 }
 </style>

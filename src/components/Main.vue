@@ -6,10 +6,10 @@
   				I Glimpse
   		</div>
   		<Menu mode="horizontal" :active-name="activeName" class="menu">
-        <MenuItem name="1" to="/main/fairystory/home">
-            	Fairy Story
+        <MenuItem name="1" to="/main/fairystory/home" class="menuItem">
+            	FairyStory
         </MenuItem>
-        <MenuItem name="2" to="/main/minions">
+        <MenuItem name="2" to="/main/minions" class="menuItem">
             	Minions     
         </MenuItem>
     	</Menu>
@@ -58,20 +58,20 @@ export default {
 <style scoped>
 .main{
 	width: 100%;
-	height: 3200px;
+	height: 2600px;
 }
 
 .header{
 	width: 100%;
 	height: 60px;
-	border:1px solid #000000;
+	/*border:1px solid #000000;*/
 }
 
 .header .logo{
-	width: 100px;
+	width: 24%;
 	height: 30px;
 	margin: 15px 15px;
-	border:1px solid #000000;
+	/*border:1px solid #000000;*/
 	font-size: 18px;
 	font-weight: bold;
 	float: left;
@@ -81,15 +81,29 @@ export default {
 	width: 40%;
 	height: 60px;
 	float: right;
-	border:1px solid #000000;
-	margin-right: 10px;
+	/*border:1px solid #000000;*/
 	font-size: 16px;
 	font-weight: bold;
 }
 
 .content{
 	width: 100%;
-	height: 3000px;
+	height: 2400px;
 	text-align: center;
+}
+
+@media screen and (max-width: 550px){
+  .header .menu{
+    width: 50%;
+    height: 60px;
+    float: right;
+    font-size: 14px;
+  }
+
+  .header .menu .menuItem{
+    width: 50%;
+    height: 54px;
+    font-size: 12px;
+  }
 }
 </style>

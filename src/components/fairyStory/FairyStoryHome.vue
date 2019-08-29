@@ -1,7 +1,7 @@
 <template>
 	<div class="fairystoryhome">
-		<div class="banner">
-			<img src="@/assets/1.jpg" style="width: 70%;height: 560px; margin: 20px 0;">
+		<div>
+			<img src="@/assets/1.jpg" class="banner">
 		</div>	
 
 		<div class="groupone">
@@ -33,16 +33,16 @@
 
 		<div class="groupTwo">
 			<div class="groupTwoItem">
-				<div class="g2_img">
-					<img src="@/assets/g2_01.jpg"  style="width: 400px;height: 200px;">
+				<div>
+					<img src="@/assets/g2_01.jpg"  class="g2_img">
 				</div>
 				<div class="g2_content">
 					{{g2_content1}}
 				</div>
 			</div>
 			<div class="groupTwoItem">
-				<div class="g2_img">
-					<img src="@/assets/g2_02.jpg"  style="width: 400px;height: 200px;">
+				<div>
+					<img src="@/assets/g2_02.jpg"  class="g2_img">
 				</div>
 				<div class="g2_content">
 					{{g2_content2}}
@@ -95,21 +95,27 @@ export default{
 .fairystoryhome{
 	width: 100%;
 	height: 2000px;
-	border: 1px solid #000000;
+	/*border: 1px solid #000000;*/
+}
+
+.banner{
+	width: 80%;
+	margin: 0 auto;
+	height: 40%;
 }
 
 .groupone{
 	width: 80%;
 	height: 360px;
 	margin: 30px auto;
-	border: 1px solid #000000;
+	/*border: 1px solid #000000;*/
 }
 
 .grouponeItem{
 	width: 30%;
 	height: 340px;
-	margin:10px 15px;
-	border: 1px solid #000000;
+	margin:10px 0;
+	/*border: 1px solid #000000;*/
 	float: left;
 }
 
@@ -117,7 +123,7 @@ export default{
 	width: 100%;
 	height: 160px;
 	padding-top: 10px;
-	border: 1px solid #000000;
+	/*border: 1px solid #000000;*/
 }
 
 .grouponeItem .g1_content{
@@ -130,14 +136,14 @@ export default{
 	width: 80%;
 	height: 360px;
 	margin: 20px auto;
-	border: 1px solid #000000;
+	/*border: 1px solid #000000;*/
 }
 
 .groupTwoItem{
 	width: 46%;
 	height: 340px;
 	margin:10px 20px;
-	border: 1px solid #000000;
+	/*border: 1px solid #000000;*/
 	float: left;
 }
 
@@ -146,7 +152,47 @@ export default{
 	height: 220px;
 	margin: 0 auto;
 	padding-top: 10px;
-	border: 1px solid #000000;
+	/*border: 1px solid #000000;*/
+}
+
+@media screen and (max-width: 550px){
+
+.fairystoryhome{
+	width: 100%;
+	height: 2300px;
+	/*border: 1px solid #000000;*/
+}
+
+.groupone{
+	width: 80%;
+	height: 1100px;
+	margin: 30px auto;
+	/*border: 1px solid #000000;*/
+}
+
+.grouponeItem{
+	width: 100%;
+	height: 340px;
+	/*border: 1px solid #000000;*/
+}
+
+.groupTwo{
+	width: 94%;
+	height: 740px;
+	margin: 20px auto;
+	/*border: 1px solid #000000;*/
+}
+
+.groupTwoItem{
+	width: 100%;
+	height: 340px;
+	margin:10px 0;
+	/*border: 1px solid #000000;*/
+}
+
+
+
+
 }
 
 </style>

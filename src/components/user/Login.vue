@@ -62,7 +62,7 @@ export default {
 	width: 28%;
 	height: 60%;
 	margin: 0 auto;
-	padding-top: 30vh;
+	padding-top: 24vh;
 }
 
 .inputItem{
