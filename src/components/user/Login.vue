@@ -67,8 +67,8 @@ export default {
 
 .inputItem{
 	width: 90%;
-	height: 20%;
-	margin: 2px auto;
+	height: 20px;
+	margin: 8px auto;
 }
 
 
@@ -81,4 +81,22 @@ export default {
   border-radius: 5px;
   border: 1px solid gray;
 }
+
+
+@media screen and (max-width: 768px){
+  .form{
+    width: 60%;
+    height: 60%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 550px){
+  .form{
+    width: 70%;
+    height: 60%;
+    margin: 0 auto;
+  }
+}
+
 </style>
