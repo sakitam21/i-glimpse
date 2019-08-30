@@ -59,14 +59,14 @@ export default {
 }
 
 .form{
-	width: 28%;
+	width: 20%;
 	height: 60%;
 	margin: 0 auto;
 	padding-top: 24vh;
 }
 
 .inputItem{
-	width: 90%;
+	width: 80%;
 	height: 20px;
 	margin: 8px auto;
 }
@@ -85,7 +85,7 @@ export default {
 
 @media screen and (max-width: 768px){
   .form{
-    width: 60%;
+    width: 50%;
     height: 60%;
     margin: 0 auto;
   }
@@ -93,7 +93,7 @@ export default {
 
 @media screen and (max-width: 550px){
   .form{
-    width: 70%;
+    width: 62%;
     height: 60%;
     margin: 0 auto;
   }
