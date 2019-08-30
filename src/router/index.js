@@ -5,7 +5,6 @@ import Main from '@/components/Main'
 import Login from '@/components/user/Login'
 
 import FairyStory from '@/components/fairyStory/FairyStory'
-import FairyStoryHome from '@/components/fairyStory/FairyStoryHome'
 
 import Minions from '@/components/minions/Minions'
 
@@ -26,14 +25,8 @@ export default new Router({
         {
           path:'fairystory',
           name:'fairystory',
-          component:FairyStory,
-          children:[
-            {
-              path:'home',
-              name:'fairystoryhome',
-              component:FairyStoryHome
-            }
-          ]
+          component:FairyStory
+            
         },
         {
           path:'minions',

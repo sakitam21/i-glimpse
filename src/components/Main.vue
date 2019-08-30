@@ -5,8 +5,8 @@
   		<div class="logo" >
   				I Glimpse
   		</div>
-  		<Menu mode="horizontal" :active-name="activeName" class="menu">
-        <MenuItem name="1" to="/main/fairystory/home" class="menuItem">
+  		<Menu mode="horizontal" :active-name="activeName" class="menu" theme="light">
+        <MenuItem name="1" to="/main/fairystory" class="menuItem">
             	FairyStory
         </MenuItem>
         <MenuItem name="2" to="/main/minions" class="menuItem">
@@ -56,6 +56,7 @@ export default {
 </script>
 
 <style scoped>
+
 .main{
 	width: 100%;
 	height: 2600px;
@@ -63,23 +64,30 @@ export default {
 
 .header{
 	width: 100%;
-	height: 60px;
+	height: 52px;
+  position: fixed;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #cfcfcf;
 	/*border:1px solid #000000;*/
 }
 
 .header .logo{
 	width: 24%;
 	height: 30px;
-	margin: 15px 15px;
+	margin: 15px 7px;
+  color: grey;
 	/*border:1px solid #000000;*/
 	font-size: 18px;
-	font-weight: bold;
+	font-weight: 800;
 	float: left;
 }
 
 .header .menu{
 	width: 40%;
-	height: 60px;
+	height: 52px;
 	float: right;
 	/*border:1px solid #000000;*/
 	font-size: 16px;
@@ -90,20 +98,34 @@ export default {
 	width: 100%;
 	height: 2400px;
 	text-align: center;
+  padding-top: 52px;
 }
 
 @media screen and (max-width: 550px){
   .header .menu{
     width: 50%;
-    height: 60px;
+    height: 52px;
     float: right;
     font-size: 14px;
+    border-style: none;
   }
 
   .header .menu .menuItem{
     width: 50%;
-    height: 54px;
+    height: 50px;
+    text-decoration: none;
     font-size: 12px;
   }
+
+  .header .logo{
+  width: 24%;
+  height: 30px;
+  margin: 15px 7px;
+  color: grey;
+  /*border:1px solid #000000;*/
+  font-size: 16px;
+  font-weight: 800;
+  float: left;
+}
 }
 </style>

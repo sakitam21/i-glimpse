@@ -41,7 +41,7 @@ export default {
   methods:{
   	submit:function(){
   		if(this.username==="root"&&this.password==="password"){
-  			router.push({name:'fairystoryhome'})
+  			router.push({name:'fairystory'})
   		}else{
   			alert("用户名或者密码错误！")
   		}
