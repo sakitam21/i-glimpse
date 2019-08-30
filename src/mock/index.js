@@ -5,8 +5,8 @@ const code = 200 //返回的状态码
 
 import userInfo from './users/userinfo.js'
 import banner from './fairystory/bannerurl.js'
-import imageurls from './fairystory/imageurls.js'
-import imageinfos from './fairystory/imageinfos.js'
+import list from './fairystory/list.js'
+import items from './fairystory/items.js'
 
 /*
 *用户信息
@@ -17,5 +17,5 @@ Mock.mock(`${domain}\/users`,'get',userInfo);
 *童话故事页
 */
 Mock.mock(`${domain}\/bannerurl`,'get',banner);
-Mock.mock(`${domain}\/imageurls`,'get',imageurls);
-Mock.mock(`${domain}\/imageinfos`,'get',imageinfos);
+Mock.mock(`${domain}\/list`,'get',list);
+Mock.mock(`${domain}\/items`,'get',items);

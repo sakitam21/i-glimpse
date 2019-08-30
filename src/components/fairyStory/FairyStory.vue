@@ -10,49 +10,17 @@
 			</div>
 		</div>
 
-		<div class="list">
-			abc abc abc abc abc abc abc abc abc abc 
-			abc abc abc abc abc abc abc abc abc abc
-			abc abc abc abc abc abc abc abc abc abc
-			abc abc abc abc abc abc abc abc abc abc
+		<div  class="list">
+			<ul>
+				<li  v-for="item in items">{{item}}</li>
+			</ul>
 		</div>
 
-		<div class="groupone">
-			<div class="grouponeItem">
-				<img :src="imageurls[0]">
+		<div class="group">
+			<div class="groupItem" v-for="item in list">
+				<img :src="item.imageurl">
 				<div class="content">
-					{{imageinfos[0]}}
-				</div>
-			</div>
-			<div class="grouponeItem">
-					<img :src="imageurls[1]">
-				<div class="content">
-					{{imageinfos[1]}}
-				</div>
-			</div>
-			<div class="grouponeItem">
-					<img :src="imageurls[2]">
-				<div class="content">
-					{{imageinfos[2]}}
-				</div>
-			</div>
-		</div>
-
-		<div class="groupTwo">
-			<div class="groupTwoItem">
-				<div>
-					<img :src="imageurls[3]"  class="g2_img">
-				</div>
-				<div class="g2_content">
-					{{imageinfos[3]}}
-				</div>
-			</div>
-			<div class="groupTwoItem">
-				<div>
-					<img :src="imageurls[4]"  class="g2_img">
-				</div>
-				<div class="g2_content">
-					{{imageinfos[4]}}
+					{{item.imageinfo}}
 				</div>
 			</div>
 		</div>
@@ -67,10 +35,8 @@ export default{
 	data:function(){
 		return {
 			bannerUrl:"",
-
-			imageurls:[],
-
-			imageinfos:[]
+			list:[],
+			items:[]
 		}
 	},
 	created: function(){
@@ -85,21 +51,19 @@ export default{
 			console.log(error)
 		})
 
-		//获取Item图url地址
-		axios.get("/imageurls")
-		.then(function(response){
-			console.log(response.data.imageurls)
-			_this.imageurls=response.data.imageurls;
-		}).catch(function(response){
-			console.log(error)
-		})
-
-		//获取ItemInfo
-  		axios.get("/imageinfos")
+  		axios.get("/list")
   		.then(function(response){
-  			console.log(response.data.imageinfos)
-  			_this.imageinfos=response.data.imageinfos;
-  		}).catch(function(error){
+  			console.log(response.data.list)
+  			_this.list=response.data.list
+  		}).catch(function(response){
+  			console.log(error)
+  		})
+
+  		axios.get("/items")
+  		.then(function(response){
+  			console.log(response.data.items)
+  			_this.items=response.data.items
+  		}).catch(function(response){
   			console.log(error)
   		})
 
@@ -110,7 +74,7 @@ export default{
 <style scoped>
 .fairystoryhome{
 	width: 100%;
-	height: 2000px;
+	height: auto;
 	/*border: 1px solid #000000;*/
 }
 
@@ -153,20 +117,31 @@ export default{
 
 .list{
 	width: 100%;
-	height: auto;
+	height: 40px;
+	color: grey;
+	text-align: center;
+	font-size: 14px;
 	background-color: #F6F9FA;
 	padding: 10px 0 10px 0;
 }
 
+.list li{
+	width: auto;
+	height: 30px;
+	display: inline-block;
+	float: center;
+	padding-left: 10px;
+}
 
-.groupone{
+.group{
 	width: 90%;
-	height: 360px;
+	height: 720px;
+	color: grey;
 	margin: 30px auto;
 	/*border: 1px solid #000000;*/
 }
 
-.grouponeItem{
+.groupItem{
 	width: 30%;
 	height: 340px;
 	margin:10px 10px;
@@ -176,46 +151,23 @@ export default{
 	float: left;
 }
 
-.grouponeItem img{
+.groupItem img{
 	width: 100%;
 	height: 120px;
 	border-radius: 10px 10px 0 0;
 	/*border: 1px solid #000000;*/
 }
 
-.grouponeItem .content{
+.groupItem .content{
 	width: 90%;
 	height: 200px;
 	margin: 10px auto;
 }
 
-.groupTwo{
-	width: 80%;
-	height: 360px;
-	margin: 20px auto;
-	/*border: 1px solid #000000;*/
-}
-
-.groupTwoItem{
-	width: 46%;
-	height: 340px;
-	margin:10px 20px;
-	/*border: 1px solid #000000;*/
-	float: left;
-}
-
-.groupTwoItem .g2_img{
-	width: 100%;
-	height: 220px;
-	margin: 0 auto;
-	padding-top: 10px;
-	/*border: 1px solid #000000;*/
-}
-
 @media screen and (max-width: 550px){
 .fairystoryhome{
 	width: 100%;
-	height: 2300px;
+	height: auto;
 	/*border: 1px solid #000000;*/
 }
 
@@ -238,37 +190,20 @@ export default{
 	border-radius: 5px;
 }
 
-.groupone{
+.group{
 	width: 90%;
 	height: 1100px;
 	margin: 10px auto;
 	/*border: 1px solid #000000;*/
 }
 
-.grouponeItem{
+.groupItem{
 	width: 100%;
 	height: 340px;
 	margin:10px 0;
 	border: 1px solid #cfcfcf;
 	/*border: 1px solid #000000;*/
 }
-
-.groupTwo{
-	width: 94%;
-	height: 740px;
-	margin: 20px auto;
-	/*border: 1px solid #000000;*/
-}
-
-.groupTwoItem{
-	width: 100%;
-	height: 340px;
-	margin:10px 0;
-	/*border: 1px solid #000000;*/
-}
-
-
-
 
 }
 

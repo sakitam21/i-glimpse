@@ -59,7 +59,7 @@ export default {
 
 .main{
 	width: 100%;
-	height: 2600px;
+	height: auto;
 }
 
 .header{
@@ -96,7 +96,7 @@ export default {
 
 .content{
 	width: 100%;
-	height: 2400px;
+	height: auto;
 	text-align: center;
   padding-top: 52px;
 }
